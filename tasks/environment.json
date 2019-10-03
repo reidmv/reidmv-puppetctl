@@ -1,0 +1,23 @@
+{
+  "description": "Manage Puppet environments",
+  "parameters": {
+    "action": {
+      "type": "Enum[list,add,modify,remove]",
+      "description": "What action to take on a Puppet environment"
+    },
+    "name": {
+      "type": "Optional[String]",
+      "description": "The name of the environment"
+    },
+    "options": {
+      "type": "Optional[Hash]",
+      "description": "Environment options to add or modify"
+    },
+    "config": {
+      "type": "Optional[String]",
+      "description": "Path to r10k yaml environment config file"
+    }
+  },
+  "input_method": "stdin",
+  "files": ["ruby_task_helper/files/task_helper.rb"]
+}
